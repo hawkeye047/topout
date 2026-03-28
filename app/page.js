@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { listProjects, createProject, deleteProject, migrateV1Data } from '@/lib/dataModel';
+import { listProjects, createProject, deleteProject, migrateV1Data, setSession } from '@/lib/dataModel';
 import { DEMO_DATA } from '@/lib/demoData';
 
 export default function HomePage() {
@@ -24,7 +24,8 @@ export default function HomePage() {
       try {
         const v1Data = JSON.parse(v1Raw);
         if (v1Data && v1Data.phases) {
-          migrateV1Data(v1Data);
+          const migrated = migrateV1Data(v1Data);
+          if (migrated) setSession(migrated.id, 'gc');
           localStorage.removeItem('topout_schedule');
           setProjects(listProjects());
         }
@@ -68,6 +69,7 @@ export default function HomePage() {
       setStage('Building your dashboard...');
       const data = await resp.json();
       const project = createProject(data.projectName, data);
+      setSession(project.id, 'gc');
       router.push(`/project/${project.id}`);
     } catch (err) {
       setError(err.message || 'Failed to parse schedule.');
@@ -78,6 +80,7 @@ export default function HomePage() {
 
   const handleDemo = () => {
     const project = createProject(DEMO_DATA.projectName, DEMO_DATA);
+    setSession(project.id, 'gc');
     router.push(`/project/${project.id}`);
   };
 
