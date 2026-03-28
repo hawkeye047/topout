@@ -214,7 +214,7 @@ export default function HomePage() {
                   key={p.id}
                   className="bg-surface-container-low hover:bg-surface-container-high
                              transition-colors duration-100 group cursor-pointer"
-                  onClick={() => router.push(`/project/${p.id}`)}
+                  onClick={() => { setSession(p.id, 'gc'); router.push(`/project/${p.id}`); }}
                 >
                   <div className="flex items-center justify-between p-5">
                     <div className="flex items-center gap-4 min-w-0">
