@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TOPOUT. | Precision Schedules</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed": "#0d1c2f",
+            "on-primary": "#472a00",
+            "secondary-fixed": "#d3e4fe",
+            "surface-dim": "#0b1326",
+            "on-primary-container": "#613b00",
+            "secondary-fixed-dim": "#b7c8e1",
+            "on-surface": "#dae2fd",
+            "inverse-primary": "#855300",
+            "surface-tint": "#ffb95f",
+            "on-error": "#690005",
+            "tertiary": "#bfcde6",
+            "primary-fixed-dim": "#ffb95f",
+            "secondary-container": "#3a4a5f",
+            "on-secondary-fixed-variant": "#38485d",
+            "on-tertiary-fixed-variant": "#3a485c",
+            "on-secondary-fixed": "#0b1c30",
+            "tertiary-fixed-dim": "#b9c7e0",
+            "on-tertiary-container": "#374559",
+            "inverse-surface": "#dae2fd",
+            "surface-container-highest": "#2d3449",
+            "secondary": "#b7c8e1",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-bright": "#31394d",
+            "tertiary-fixed": "#d5e3fd",
+            "primary": "#ffc174",
+            "background": "#0b1326",
+            "on-background": "#dae2fd",
+            "surface-container-lowest": "#060e20",
+            "surface-container-high": "#222a3d",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-low": "#131b2e",
+            "tertiary-container": "#a3b2ca",
+            "primary-fixed": "#ffddb8",
+            "surface": "#0b1326",
+            "error-container": "#93000a",
+            "on-secondary-container": "#a9bad3",
+            "on-secondary": "#213145",
+            "outline-variant": "#534434",
+            "outline": "#a08e7a",
+            "error": "#ffb4ab",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed": "#2a1700",
+            "surface-container": "#171f33",
+            "inverse-on-surface": "#283044",
+            "surface-variant": "#2d3449",
+            "primary-container": "#f59e0b",
+            "on-tertiary": "#233144"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b1326;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .machine-gradient {
+      background: linear-gradient(135deg, #ffc174 0%, #f59e0b 100%);
+    }
+    .hero-bg {
+      background: radial-gradient(circle at center, #131b2e 0%, #0b1326 100%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center justify-center hero-bg overflow-hidden">
+<!-- Top Bar Anchor (Shell Suppressed per transactional rule, using simplified brand anchor instead) -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 h-20 z-50">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black tracking-[0.2em] text-[#dae2fd] font-headline uppercase">
+        TOPOUT<span class="text-primary-container">.</span>
+</span>
+</div>
+<div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.1em] text-secondary uppercase">
+<span class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer">Security</span>
+<span class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer">Integration</span>
+<span class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer">Pricing</span>
+</div>
+</header>
+<!-- Hero Content Section -->
+<main class="w-full max-w-4xl px-6 py-20 flex flex-col items-center text-center">
+<!-- Branding Header -->
+<div class="mb-8 flex flex-col items-center">
+<div class="w-1.5 h-1.5 bg-primary-container mb-4"></div>
+<h1 class="text-4xl md:text-6xl font-headline font-extrabold tracking-[-0.04em] text-on-surface leading-tight max-w-2xl">
+        Schedules that actually <span class="text-primary-container">make sense.</span>
+</h1>
+<p class="mt-6 text-lg md:text-xl text-secondary max-w-xl font-medium leading-relaxed opacity-80">
+        Upload a PDF schedule and get a clean, role-based dashboard for owners, GCs, and subs.
+      </p>
+</div>
+<!-- Upload Zone (Machined Element) -->
+<div class="w-full max-w-lg mt-4 group">
+<div class="relative bg-surface-container-low p-12 border-2 border-dashed border-outline-variant hover:border-primary-container transition-all duration-300 cursor-pointer flex flex-col items-center justify-center">
+<!-- Background Glow Effect on Hover -->
+<div class="absolute inset-0 bg-primary-container opacity-0 group-hover:opacity-[0.02] transition-opacity duration-300"></div>
+<div class="w-16 h-16 mb-6 flex items-center justify-center bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="upload_file">upload_file</span>
+</div>
+<h3 class="font-headline font-bold text-lg tracking-tight text-on-surface uppercase">Upload Schedule PDF</h3>
+<p class="text-secondary text-xs mt-2 font-medium uppercase tracking-widest opacity-60">P6, MS PROJECT, OR EXCEL EXPORTS</p>
+</div>
+<!-- Divider -->
+<div class="flex items-center gap-4 my-8">
+<div class="h-px flex-1 bg-outline-variant opacity-30"></div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-[0.3em]">OR</span>
+<div class="h-px flex-1 bg-outline-variant opacity-30"></div>
+</div>
+<!-- Action Button -->
+<button class="w-full py-4 border border-secondary text-secondary font-bold text-sm tracking-widest uppercase hover:bg-secondary hover:text-surface transition-colors duration-200 flex items-center justify-center gap-3 active:scale-[0.98]">
+        Load Demo Schedule 
+        <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer Info Labels -->
+<footer class="fixed bottom-12 w-full flex justify-center items-center gap-8 md:gap-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="person">person</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.15em]">Owner View</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="foundation">foundation</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.15em]">GC View</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="handyman">handyman</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.15em]">Sub View</span>
+</div>
+</footer>
+<!-- Background Decorative Grid Texture -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03]" data-alt="subtle dark technical grid pattern representing a blueprint or architectural planning surface" style="background-image: radial-gradient(#dae2fd 0.5px, transparent 0.5px); background-size: 32px 32px;"></div>
+</body></html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TOPOUT. | Project Alpha Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#0d1c2f",
+              "on-primary": "#472a00",
+              "secondary-fixed": "#d3e4fe",
+              "surface-dim": "#0b1326",
+              "on-primary-container": "#613b00",
+              "secondary-fixed-dim": "#b7c8e1",
+              "on-surface": "#dae2fd",
+              "inverse-primary": "#855300",
+              "surface-tint": "#ffb95f",
+              "on-error": "#690005",
+              "tertiary": "#bfcde6",
+              "primary-fixed-dim": "#ffb95f",
+              "secondary-container": "#3a4a5f",
+              "on-secondary-fixed-variant": "#38485d",
+              "on-tertiary-fixed-variant": "#3a485c",
+              "on-secondary-fixed": "#0b1c30",
+              "tertiary-fixed-dim": "#b9c7e0",
+              "on-tertiary-container": "#374559",
+              "inverse-surface": "#dae2fd",
+              "surface-container-highest": "#2d3449",
+              "secondary": "#b7c8e1",
+              "on-primary-fixed-variant": "#653e00",
+              "surface-bright": "#31394d",
+              "tertiary-fixed": "#d5e3fd",
+              "primary": "#ffc174",
+              "background": "#0b1326",
+              "on-background": "#dae2fd",
+              "surface-container-lowest": "#060e20",
+              "surface-container-high": "#222a3d",
+              "on-surface-variant": "#d8c3ad",
+              "surface-container-low": "#131b2e",
+              "tertiary-container": "#a3b2ca",
+              "primary-fixed": "#ffddb8",
+              "surface": "#0b1326",
+              "error-container": "#93000a",
+              "on-secondary-container": "#a9bad3",
+              "on-secondary": "#213145",
+              "outline-variant": "#534434",
+              "outline": "#a08e7a",
+              "error": "#ffb4ab",
+              "on-error-container": "#ffdad6",
+              "on-primary-fixed": "#2a1700",
+              "surface-container": "#171f33",
+              "inverse-on-surface": "#283044",
+              "surface-variant": "#2d3449",
+              "primary-container": "#f59e0b",
+              "on-tertiary": "#233144"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b1326; color: #dae2fd; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar Execution from JSON -->
+<header class="bg-[#0b1326] docked full-width top-0 z-50 flex justify-between items-center px-6 h-16 w-full sticky">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#ffc174] cursor-pointer">menu</span>
+<div class="flex items-center">
+<span class="text-2xl font-black tracking-[0.2em] text-[#dae2fd] after:content-['.'] after:text-[#f59e0b] font-headline uppercase">TOPOUT</span>
+<div class="ml-6 px-3 py-1 bg-surface-container-highest border-l-4 border-primary-container hidden md:block">
+<span class="font-headline font-bold text-sm tracking-tight">PROJECT ALPHA</span>
+</div>
+</div>
+</div>
+<!-- Role Toggle Pills & Actions -->
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex bg-surface-container-low p-1 rounded-sm">
+<button class="px-4 py-1 text-xs font-bold font-headline tracking-widest text-secondary hover:bg-surface-container-highest transition-colors">OWNER</button>
+<button class="px-4 py-1 text-xs font-bold font-headline tracking-widest bg-primary-container text-on-primary rounded-sm">GC</button>
+<button class="px-4 py-1 text-xs font-bold font-headline tracking-widest text-secondary hover:bg-surface-container-highest transition-colors">SUB</button>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative cursor-pointer">
+<span class="material-symbols-outlined text-secondary">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+</div>
+<span class="material-symbols-outlined text-secondary cursor-pointer">upload</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8 pb-32">
+<!-- Stats Horizontal Scroll Bar -->
+<section class="flex overflow-x-auto gap-4 pb-6 scrollbar-hide no-scrollbar" style="-ms-overflow-style: none; scrollbar-width: none;">
+<div class="flex-none w-64 bg-surface-container-low p-5 border-l-2 border-primary">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Total Progress</p>
+<div class="flex items-end justify-between">
+<h3 class="text-2xl font-black font-headline tracking-tight text-on-surface">34%</h3>
+<span class="text-xs text-secondary mb-1">18/53 ACTIVITIES</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest mt-3">
+<div class="bg-primary h-full w-[34%]"></div>
+</div>
+</div>
+<div class="flex-none w-56 bg-surface-container-low p-5">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Active Work</p>
+<h3 class="text-2xl font-black font-headline tracking-tight text-on-surface">4</h3>
+<p class="text-xs text-secondary mt-1 tracking-tight">IN PROGRESS</p>
+</div>
+<div class="flex-none w-56 bg-surface-container-low p-5">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Blockers</p>
+<h3 class="text-2xl font-black font-headline tracking-tight text-on-surface">0</h3>
+<p class="text-xs text-secondary mt-1 tracking-tight">DELAYED ITEMS</p>
+</div>
+<div class="flex-none w-72 bg-surface-container-low p-5">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Timeline Window</p>
+<h3 class="text-xl font-black font-headline tracking-tight text-on-surface uppercase">May 4 → Oct 12</h3>
+<p class="text-xs text-secondary mt-1 tracking-tight">162 TOTAL DAYS</p>
+</div>
+<div class="flex-none w-48 bg-surface-container-low p-5">
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Active Trades</p>
+<h3 class="text-2xl font-black font-headline tracking-tight text-on-surface">14</h3>
+<p class="text-xs text-secondary mt-1 tracking-tight">CONTRACTORS</p>
+</div>
+</section>
+<!-- View Controls -->
+<div class="flex justify-between items-center mt-4 mb-8">
+<div class="flex bg-surface-container-highest p-1 rounded-sm">
+<button class="flex items-center gap-2 px-6 py-2 bg-surface text-primary text-xs font-bold font-headline uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">event_note</span>
+                    Timeline
+                </button>
+<button class="flex items-center gap-2 px-6 py-2 text-secondary text-xs font-bold font-headline uppercase tracking-widest hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-sm">list_alt</span>
+                    List
+                </button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-low border border-outline-variant/20 text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                Filters
+            </button>
+</div>
+<!-- Content: Collapsible Phase Cards -->
+<div class="space-y-4">
+<!-- Phase 1: Preconstruction -->
+<div class="bg-surface-container-low">
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-surface-container-high transition-colors border-l-4 border-tertiary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+<div>
+<h4 class="font-headline font-bold text-sm tracking-tight uppercase text-on-surface">PHASE 01: PRECONSTRUCTION</h4>
+<p class="text-[10px] text-secondary font-bold tracking-widest">4 ITEMS COMPLETED</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-2 py-0.5 bg-tertiary/20 text-tertiary text-[10px] font-bold tracking-tighter">100% COMPLETE</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Phase 2: Demolition & Abatement (EXPANDED) -->
+<div class="bg-surface-container-low border-l-4 border-primary">
+<div class="flex items-center justify-between p-4 bg-surface-container-high">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">expand_less</span>
+<div>
+<h4 class="font-headline font-bold text-sm tracking-tight uppercase text-on-surface">PHASE 02: DEMOLITION &amp; ABATEMENT</h4>
+<p class="text-[10px] text-secondary font-bold tracking-widest">2 ACTIVE TASKS</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-bold tracking-tighter">50% PROGRESS</span>
+</div>
+</div>
+<!-- Activities -->
+<div class="p-4 space-y-px bg-surface-container-low">
+<!-- Activity 1 -->
+<div class="grid grid-cols-12 gap-4 items-center p-3 bg-surface-container-highest/40 hover:bg-surface-container-highest transition-none">
+<div class="col-span-12 md:col-span-4">
+<h5 class="text-sm font-bold text-on-surface tracking-tight">Selective Demolition</h5>
+<p class="text-[10px] text-secondary font-medium tracking-tight uppercase">Demo Sub · 8 Days Estimated</p>
+</div>
+<div class="col-span-6 md:col-span-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-secondary">radio_button_unchecked</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">Not Started</span>
+</div>
+<div class="col-span-6 md:col-span-5">
+<div class="relative w-full h-4 bg-surface-container-high overflow-hidden">
+<!-- Gantt Bar Mockup -->
+<div class="absolute left-[10%] w-[40%] h-full bg-surface-container-highest border-x border-outline-variant/40"></div>
+</div>
+</div>
+</div>
+<!-- Activity 2 -->
+<div class="grid grid-cols-12 gap-4 items-center p-3 bg-surface-container-highest/40 hover:bg-surface-container-highest transition-none">
+<div class="col-span-12 md:col-span-4">
+<h5 class="text-sm font-bold text-on-surface tracking-tight">Asbestos Abatement</h5>
+<p class="text-[10px] text-secondary font-medium tracking-tight uppercase">Abatement Sub · 5 Days Estimated</p>
+</div>
+<div class="col-span-6 md:col-span-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">In Progress</span>
+</div>
+<div class="col-span-6 md:col-span-5">
+<div class="relative w-full h-4 bg-surface-container-high overflow-hidden">
+<!-- Gantt Bar Active -->
+<div class="absolute left-0 w-[65%] h-full bg-gradient-to-r from-primary-container to-primary shadow-[0_0_15px_rgba(245,158,11,0.2)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 3: Rough-In (MEP) -->
+<div class="bg-surface-container-low opacity-60">
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-surface-container-high transition-colors border-l-4 border-secondary-container">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+<div>
+<h4 class="font-headline font-bold text-sm tracking-tight uppercase text-on-surface">PHASE 03: ROUGH-IN (MEP)</h4>
+<p class="text-[10px] text-secondary font-bold tracking-widest">COMMENCES JUNE 14</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-2 py-0.5 bg-surface-container-highest text-secondary text-[10px] font-bold tracking-tighter">0% PROGRESS</span>
+<span class="material-symbols-outlined text-secondary">lock</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Execution from JSON -->
+<nav class="fixed bottom-0 left-0 w-full h-16 flex justify-around items-center px-4 bg-[#0b1326] z-50 border-t-0 shadow-2xl">
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] py-1 hover:text-[#ffc174] cursor-pointer">
+<span class="material-symbols-outlined">calendar_view_day</span>
+<span class="font-['Manrope'] font-bold text-[10px] tracking-tighter uppercase mt-1">SCHEDULE</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#f59e0b] text-[#0b1326] rounded-sm py-1 px-4 cursor-pointer">
+<span class="material-symbols-outlined">engineering</span>
+<span class="font-['Manrope'] font-bold text-[10px] tracking-tighter uppercase mt-1">TRADES</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] py-1 hover:text-[#ffc174] cursor-pointer">
+<span class="material-symbols-outlined">fact_check</span>
+<span class="font-['Manrope'] font-bold text-[10px] tracking-tighter uppercase mt-1">TASKS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] py-1 hover:text-[#ffc174] cursor-pointer">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-['Manrope'] font-bold text-[10px] tracking-tighter uppercase mt-1">ALERTS</span>
+</div>
+</nav>
+<!-- Contextual FAB (Hidden on this detailed dashboard per suppression rules if deemed task-focused, but let's assume it belongs on the main GC dashboard for adding actions) -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-on-primary shadow-xl flex items-center justify-center rounded-sm active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

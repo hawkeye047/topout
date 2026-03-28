@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TOPOUT. | Owner View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#31394d",
+              "inverse-on-surface": "#283044",
+              "on-secondary-container": "#a9bad3",
+              "tertiary-fixed": "#d5e3fd",
+              "on-primary": "#472a00",
+              "on-tertiary-fixed-variant": "#3a485c",
+              "outline": "#a08e7a",
+              "surface-variant": "#2d3449",
+              "secondary-fixed": "#d3e4fe",
+              "on-primary-fixed": "#2a1700",
+              "surface": "#0b1326",
+              "on-tertiary": "#233144",
+              "on-error": "#690005",
+              "on-error-container": "#ffdad6",
+              "secondary-container": "#3a4a5f",
+              "tertiary-container": "#a3b2ca",
+              "on-secondary-fixed": "#0b1c30",
+              "primary": "#ffc174",
+              "tertiary": "#bfcde6",
+              "surface-container-high": "#222a3d",
+              "inverse-primary": "#855300",
+              "on-tertiary-fixed": "#0d1c2f",
+              "on-surface": "#dae2fd",
+              "primary-fixed": "#ffddb8",
+              "surface-container": "#171f33",
+              "background": "#0b1326",
+              "surface-container-highest": "#2d3449",
+              "on-surface-variant": "#d8c3ad",
+              "primary-container": "#f59e0b",
+              "outline-variant": "#534434",
+              "on-secondary-fixed-variant": "#38485d",
+              "surface-container-low": "#131b2e",
+              "error-container": "#93000a",
+              "on-primary-fixed-variant": "#653e00",
+              "secondary-fixed-dim": "#b7c8e1",
+              "primary-fixed-dim": "#ffb95f",
+              "on-tertiary-container": "#374559",
+              "inverse-surface": "#dae2fd",
+              "surface-container-lowest": "#060e20",
+              "on-secondary": "#213145",
+              "on-primary-container": "#613b00",
+              "tertiary-fixed-dim": "#b9c7e0",
+              "surface-dim": "#0b1326",
+              "on-background": "#dae2fd",
+              "secondary": "#b7c8e1",
+              "error": "#ffb4ab",
+              "surface-tint": "#ffb95f"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326] flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#ffc174] cursor-pointer">menu</span>
+<h1 class="font-['Manrope'] tracking-[0.2em] font-bold uppercase text-xl text-[#dae2fd]">TOPOUT<span class="text-[#ffc174]">.</span></h1>
+</div>
+<!-- Role-Based Toggle Pill -->
+<div class="flex bg-surface-container-highest rounded-sm p-1">
+<button class="px-4 py-1 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant opacity-60">Admin</button>
+<button class="px-4 py-1 text-[10px] font-bold uppercase tracking-wider bg-primary text-on-primary rounded-sm">Owner</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 mr-6">
+<a class="font-['Manrope'] text-xs font-bold uppercase tracking-widest text-[#ffc174] border-b-2 border-[#f59e0b] pb-1" href="#">Schedule</a>
+<a class="font-['Manrope'] text-xs font-bold uppercase tracking-widest text-[#b7c8e1] hover:text-[#ffc174] transition-colors" href="#">Trades</a>
+<a class="font-['Manrope'] text-xs font-bold uppercase tracking-widest text-[#b7c8e1] hover:text-[#ffc174] transition-colors" href="#">Tasks</a>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-xs text-primary border border-outline-variant/20">GC</div>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Stats Bar: Milestone Focus -->
+<header class="mb-12 grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="md:col-span-2 bg-surface-container-low p-6 flex items-center gap-8 relative overflow-hidden">
+<div class="relative w-24 h-24 flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-secondary-container" cx="18" cy="18" fill="none" r="16" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="72, 100" stroke-linecap="butt" stroke-width="3"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-headline font-extrabold tracking-tighter text-on-surface">72%</span>
+</div>
+</div>
+<div>
+<h2 class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-1">Project Health</h2>
+<p class="text-3xl font-headline font-extrabold tracking-tight text-on-surface leading-none mb-2">ON TRACK</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">Live Site Data Synchronized</span>
+</div>
+</div>
+<!-- Machined visual accent -->
+<div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none"></div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-center">
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-1">Upcoming Milestones</p>
+<p class="text-2xl font-headline font-bold text-on-surface">3 Pending</p>
+<p class="text-[10px] font-medium text-on-surface-variant mt-2">Next: DOB Final Inspection</p>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-center border-l-4 border-primary">
+<div class="flex justify-between items-start mb-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Target Completion</p>
+<span class="material-symbols-outlined text-xs text-primary">event</span>
+</div>
+<p class="text-2xl font-headline font-bold text-on-surface">Oct 05, 2024</p>
+<div class="mt-2 bg-surface-container-highest px-2 py-0.5 inline-block self-start">
+<p class="text-[10px] font-bold uppercase text-on-surface">Budget: $1.5M</p>
+</div>
+</div>
+</header>
+<!-- Major Phases Grid -->
+<section class="space-y-6">
+<div class="flex items-center justify-between mb-8 border-b border-outline-variant/10 pb-4">
+<h3 class="text-xl font-headline font-extrabold tracking-tight uppercase">Development Roadmap</h3>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-[10px] font-bold uppercase tracking-wider text-on-surface border border-outline-variant/20">Milestones Only</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">filter_list</button>
+</div>
+</div>
+<!-- Phase 1: Planning & Approvals -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-1 bg-surface-container-low group">
+<div class="lg:col-span-4 p-8 bg-surface-container-high flex flex-col justify-between min-h-[200px]">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="text-xs font-bold uppercase tracking-tighter bg-primary/20 text-primary px-2 py-0.5">PHASE 01</span>
+<span class="text-[10px] font-bold text-on-surface-variant">Q1-Q2 2024</span>
+</div>
+<h4 class="text-2xl font-headline font-bold tracking-tight text-on-surface">Planning &amp; Approvals</h4>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-extrabold text-on-surface/20">100%</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="lg:col-span-8 p-8 flex flex-col justify-center space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-sm">handshake</span>
+<div>
+<p class="text-sm font-bold text-on-surface uppercase tracking-tight">Landlord Approval</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Final sign-off on interior structural mods</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">COMPLETED</p>
+<p class="text-[10px] text-secondary">Jan 12</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-sm">description</span>
+<div>
+<p class="text-sm font-bold text-on-surface uppercase tracking-tight">DOB Permits</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Alt-1 Filing for mechanical upgrades</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">COMPLETED</p>
+<p class="text-[10px] text-secondary">Feb 28</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 2: Active Construction (Delayed Item Example) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-1 bg-surface-container-low">
+<div class="lg:col-span-4 p-8 bg-surface-container-high flex flex-col justify-between min-h-[200px] border-l-4 border-error">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="text-xs font-bold uppercase tracking-tighter bg-error/20 text-error px-2 py-0.5">PHASE 02</span>
+<span class="text-[10px] font-bold text-on-surface-variant">CURRENT</span>
+</div>
+<h4 class="text-2xl font-headline font-bold tracking-tight text-on-surface">Hard Construction</h4>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-extrabold text-on-surface/20">45%</span>
+<div class="w-12 h-1 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-error w-[45%]"></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 p-8 flex flex-col justify-center space-y-6">
+<!-- Delayed Milestone -->
+<div class="flex items-center justify-between p-4 bg-error-container/10 border-l-4 border-error">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error text-sm">warning</span>
+<div>
+<p class="text-sm font-bold text-error uppercase tracking-tight">Substantial Completion</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Delayed by glass curtain wall lead times</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-error">REVISED: SEP 15</p>
+<p class="text-[10px] text-on-surface-variant line-through">WAS: AUG 30</p>
+</div>
+</div>
+<div class="flex items-center justify-between opacity-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-sm">bolt</span>
+<div>
+<p class="text-sm font-bold text-on-surface uppercase tracking-tight">MEP Rough-In</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Core and shell electrical distribution</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">IN PROGRESS</p>
+<p class="text-[10px] text-secondary">Target: Jul 10</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 3: Closeout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-1 bg-surface-container-low opacity-60 grayscale hover:grayscale-0 transition-all cursor-not-allowed">
+<div class="lg:col-span-4 p-8 bg-surface-container-high flex flex-col justify-between min-h-[200px]">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="text-xs font-bold uppercase tracking-tighter bg-surface-container-highest text-secondary px-2 py-0.5">PHASE 03</span>
+<span class="text-[10px] font-bold text-on-surface-variant">Q4 2024</span>
+</div>
+<h4 class="text-2xl font-headline font-bold tracking-tight text-on-surface">Closeout &amp; Handover</h4>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-extrabold text-on-surface/10">0%</span>
+<span class="material-symbols-outlined text-surface-container-highest">lock</span>
+</div>
+</div>
+<div class="lg:col-span-8 p-8 flex flex-col justify-center space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-sm">assignment_turned_in</span>
+<div>
+<p class="text-sm font-bold text-on-surface uppercase tracking-tight">Certificate of Occupancy</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Final DOB sign-off and safety certs</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">UPCOMING</p>
+<p class="text-[10px] text-secondary">Oct 05</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Anchor / Map Placeholder -->
+<div class="mt-16 w-full h-48 bg-surface-container-low relative overflow-hidden flex items-center justify-center">
+<img alt="Project Site Context" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="Monochromatic dark architectural blueprint rendering showing construction site layout with high contrast industrial lines and navy blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFhQrTFAlYBMEwt0jcWJ7uH5kqKEVqX78jAAviA1pu0GXTGB4mGv2KuLhNkX1rbgZNy8_1F7pZVEh5MfpisrFwZN_-BLZXOUpmV4sl8CQop8cdIo_wuUVjemYPNucRW9SBZRhRZNhsxYsL4YyPFH0zbfYNog5_b4bMDbzq8E7fuTwts3KfMTaEOjJfpVHdSGQH9BMKVuFCrc0k9UOV_HvjrMAos3zuSTdBBrCV5S48UA8169aWmZfMzfBH3NL1Z3Hf15VZUkAPh0hk"/>
+<div class="z-10 text-center">
+<p class="text-[10px] font-bold uppercase tracking-[0.4em] text-primary mb-2">Live Site View</p>
+<div class="flex items-center gap-2 justify-center">
+<span class="material-symbols-outlined text-on-surface">location_on</span>
+<p class="text-sm font-headline font-bold text-on-surface uppercase tracking-widest">Skyline Tower A, NY</p>
+</div>
+</div>
+<!-- Machined frame effect -->
+<div class="absolute inset-4 border border-outline-variant/10 pointer-events-none"></div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-4 bg-[#0b1326] z-50">
+<div class="flex flex-col items-center justify-center bg-[#f59e0b] text-[#0b1326] rounded-sm px-4 py-1">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Schedule</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">construction</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Trades</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Tasks</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-wider">Alerts</span>
+</div>
+</nav>
+</body></html>

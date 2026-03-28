@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed": "#0d1c2f",
+            "on-primary": "#472a00",
+            "secondary-fixed": "#d3e4fe",
+            "surface-dim": "#0b1326",
+            "on-primary-container": "#613b00",
+            "secondary-fixed-dim": "#b7c8e1",
+            "on-surface": "#dae2fd",
+            "inverse-primary": "#855300",
+            "surface-tint": "#ffb95f",
+            "on-error": "#690005",
+            "tertiary": "#bfcde6",
+            "primary-fixed-dim": "#ffb95f",
+            "secondary-container": "#3a4a5f",
+            "on-secondary-fixed-variant": "#38485d",
+            "on-tertiary-fixed-variant": "#3a485c",
+            "on-secondary-fixed": "#0b1c30",
+            "tertiary-fixed-dim": "#b9c7e0",
+            "on-tertiary-container": "#374559",
+            "inverse-surface": "#dae2fd",
+            "surface-container-highest": "#2d3449",
+            "secondary": "#b7c8e1",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-bright": "#31394d",
+            "tertiary-fixed": "#d5e3fd",
+            "primary": "#ffc174",
+            "background": "#0b1326",
+            "on-background": "#dae2fd",
+            "surface-container-lowest": "#060e20",
+            "surface-container-high": "#222a3d",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-low": "#131b2e",
+            "tertiary-container": "#a3b2ca",
+            "primary-fixed": "#ffddb8",
+            "surface": "#0b1326",
+            "error-container": "#93000a",
+            "on-secondary-container": "#a9bad3",
+            "on-secondary": "#213145",
+            "outline-variant": "#534434",
+            "outline": "#a08e7a",
+            "error": "#ffb4ab",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed": "#2a1700",
+            "surface-container": "#171f33",
+            "inverse-on-surface": "#283044",
+            "surface-variant": "#2d3449",
+            "primary-container": "#f59e0b",
+            "on-tertiary": "#233144"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface m-0 p-0 overflow-hidden">
+<!-- Background Dashboard Content (Blurred/Overlaid) -->
+<div class="fixed inset-0 z-0 flex flex-col blur-sm opacity-40">
+<!-- TopAppBar Mock -->
+<header class="bg-[#0b1326] text-[#ffc174] font-['Manrope'] font-bold tracking-[-0.05em] uppercase flex justify-between items-center px-6 h-16 w-full z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">menu</span>
+<div class="text-2xl font-black tracking-[0.2em] text-[#dae2fd] after:content-['.'] after:text-[#f59e0b]">TOPOUT</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[#b7c8e1] text-xs font-bold tracking-widest">OWNER</span>
+</div>
+</header>
+<!-- Content Grid Mock -->
+<main class="flex-1 p-6 grid grid-cols-12 gap-4">
+<div class="col-span-8 bg-surface-container-low h-64"></div>
+<div class="col-span-4 bg-surface-container-high h-64"></div>
+<div class="col-span-12 bg-surface-container-highest h-full"></div>
+</main>
+</div>
+<!-- Notification Panel Overlay Backdrop -->
+<div class="fixed inset-0 bg-[#0b1326]/80 backdrop-blur-md z-[60]"></div>
+<!-- Notification Slide-over Panel -->
+<div class="fixed inset-y-0 right-0 w-full max-w-md bg-on-surface text-surface z-[70] flex flex-col shadow-2xl">
+<!-- Panel Header -->
+<header class="bg-surface text-on-surface px-6 py-8 flex justify-between items-start border-b border-outline-variant/20">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tighter uppercase font-headline">Notifications</h2>
+<p class="text-primary font-bold text-xs tracking-widest mt-1">3 UNREAD ALERTS</p>
+</div>
+<button class="bg-surface-container-highest p-2 hover:bg-primary hover:text-surface transition-colors">
+<span class="material-symbols-outlined block text-2xl">close</span>
+</button>
+</header>
+<!-- Notifications List -->
+<div class="flex-1 overflow-y-auto p-6 space-y-4 bg-on-surface">
+<!-- Notification Item 1: Delayed -->
+<div class="group relative bg-[#fef2f2] border-l-8 border-[#ef4444] p-5 flex flex-col gap-2 transition-all hover:translate-x-1">
+<div class="flex justify-between items-center">
+<span class="text-[#991b1b] font-black text-[10px] tracking-[0.1em] uppercase bg-[#fee2e2] px-2 py-0.5">DELAYED — 2 Days Behind</span>
+<span class="text-[#991b1b] material-symbols-outlined text-lg">error</span>
+</div>
+<div>
+<h3 class="text-surface font-headline font-extrabold text-lg leading-tight tracking-tight">Asbestos Abatement — Abatement Sub</h3>
+<p class="text-surface/70 font-bold text-xs uppercase mt-1">Demolition · Jun 10</p>
+</div>
+</div>
+<!-- Notification Item 2: Due Today -->
+<div class="group relative bg-[#fffbeb] border-l-8 border-[#f59e0b] p-5 flex flex-col gap-2 transition-all hover:translate-x-1">
+<div class="flex justify-between items-center">
+<span class="text-[#92400e] font-black text-[10px] tracking-[0.1em] uppercase bg-[#fef3c7] px-2 py-0.5">DUE TODAY — Due Today</span>
+<span class="text-[#92400e] material-symbols-outlined text-lg">warning</span>
+</div>
+<div>
+<h3 class="text-surface font-headline font-extrabold text-lg leading-tight tracking-tight">Submittals &amp; Shop Dwgs — All Trades</h3>
+<p class="text-surface/70 font-bold text-xs uppercase mt-1">Preconstruction · Jun 5</p>
+</div>
+</div>
+<!-- Notification Item 3: Starting Soon -->
+<div class="group relative bg-[#eff6ff] border-l-8 border-[#3b82f6] p-5 flex flex-col gap-2 transition-all hover:translate-x-1">
+<div class="flex justify-between items-center">
+<span class="text-[#1e40af] font-black text-[10px] tracking-[0.1em] uppercase bg-[#dbeafe] px-2 py-0.5">STARTING SOON — Starting Tomorrow</span>
+<span class="text-[#1e40af] material-symbols-outlined text-lg">info</span>
+</div>
+<div>
+<h3 class="text-surface font-headline font-extrabold text-lg leading-tight tracking-tight">Selective Demolition — Demo Sub</h3>
+<p class="text-surface/70 font-bold text-xs uppercase mt-1">Demolition · Jun 8</p>
+</div>
+</div>
+</div>
+<!-- Panel Footer -->
+<footer class="p-8 border-t border-outline-variant/10 bg-on-surface">
+<a class="flex items-center justify-center gap-3 py-4 border-2 border-surface text-surface font-black text-xs tracking-[0.2em] uppercase hover:bg-surface hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined text-xl">notifications</span>
+        Enable push notifications
+      </a>
+<div class="mt-6 flex justify-center">
+<img alt="Logo" class="opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmKuX_L2gXFq_fpF_tox9741m2x8U7OHqy5pqiaVIh-uFzRa9wD437LziZXdiE8IpANEw_IBVKNWJko_Wm3iyXak19CGKAIwY8-tvBLJSjazWVartb7BdqL2ljnTD-92iDsdjcDeId7ByDDY62VrBX7_9Y1mNWXzeOelb-QS0zTeT_GdxIUhsE2lIjDAz8QCUvnIIyCYw1SdODb7FWRISUmmLsMSckkOSuUmdqHmm5-LWNamIfIXbdAfoiiAwi4a3PgabYYl-2vP1b"/>
+</div>
+</footer>
+</div>
+<!-- BottomNavBar (Suppressed as per rules for task-focused slide-over, but here is the logic for visibility check) -->
+<!-- Navigation is suppressed because this is a focused panel action -->
+</body></html>

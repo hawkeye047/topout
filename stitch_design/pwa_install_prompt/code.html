@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TOPOUT | Install App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#0b1326",
+                        "surface-variant": "#2d3449",
+                        "surface-container-high": "#222a3d",
+                        "primary": "#ffc174",
+                        "on-surface": "#dae2fd",
+                        "secondary": "#b7c8e1",
+                        "primary-container": "#f59e0b",
+                        "surface-container-low": "#131b2e",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#534434",
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-panel {
+            background: rgba(34, 42, 61, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen overflow-hidden">
+<!-- Background: GC Dashboard (Blurred Context) -->
+<div class="fixed inset-0 z-0 flex flex-col blur-md brightness-[0.3]">
+<!-- TopAppBar Anchor -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0b1326]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-amber-500">menu</span>
+<span class="font-headline font-bold tracking-[0.2em] text-[#dae2fd] text-xl">TOPOUT</span>
+</div>
+<div class="text-amber-500 font-headline font-bold tracking-tighter uppercase">OWNER</div>
+</header>
+<!-- Mock Dashboard Content -->
+<main class="p-6 space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 h-32 flex flex-col justify-between">
+<span class="text-[10px] uppercase tracking-widest text-secondary">PHASE: 04</span>
+<span class="text-2xl font-headline font-extrabold text-primary">82%</span>
+</div>
+<div class="bg-surface-container-low p-4 h-32 flex flex-col justify-between">
+<span class="text-[10px] uppercase tracking-widest text-secondary">ACTIVE TASKS</span>
+<span class="text-2xl font-headline font-extrabold text-on-surface">14</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 h-64">
+<div class="w-full h-full bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-50" data-alt="Technical architectural blueprint layout on a digital screen with orange measurement lines and dark navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6ycRRQwVBdNhbtw81m0KxS_7YSOEhca2li2j5WcSgddCEZMSAzskt9Kpi9lAkPlGV36F6XA-6YYzlBTTu4SOfWC0kpyBIJHXK9fHpUIgFLFUZhc-Th7yQrJh5z_isZ1IB8dBTLdp3zdYMB4tBQURysYPcIL0V3XYdY9aBp1nx0EnFmL1nYN4_QV4O78QnoxCdkmpqcTv8ypTRN1oyfqK8uxIWIorCKV28B3M2pRn6PFSmWeFQnPT5FTDc-4YCW4o4rFauRVv51GGC"/>
+</div>
+</div>
+</main>
+</div>
+<!-- Overlay Layer -->
+<div class="fixed inset-0 bg-surface/60 z-10"></div>
+<!-- PWA Install Prompt Card -->
+<div class="fixed inset-x-0 bottom-0 z-50 p-4 md:flex md:justify-center md:pb-12">
+<div class="w-full max-w-md bg-surface-container-high border-t-4 border-primary shadow-2xl overflow-hidden animate-slide-up">
+<div class="p-6 space-y-6">
+<!-- Header & Branding -->
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="w-14 h-14 bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline font-extrabold text-xl tracking-tight text-on-surface leading-none mb-1">Install TopOut</h2>
+<p class="text-secondary text-sm leading-tight">Add to home screen for quick access to site schedules and trades.</p>
+</div>
+</div>
+</div>
+<!-- Industrial Details -->
+<div class="bg-surface-container-low p-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">bolt</span>
+<span class="text-[10px] font-headline font-bold uppercase tracking-[0.15em] text-secondary">Performance Mode Optimized</span>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center justify-end gap-6 pt-2">
+<button class="text-secondary font-headline font-bold text-sm uppercase tracking-widest hover:text-on-surface transition-colors">
+                        Later
+                    </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-surface-container-lowest font-headline font-extrabold text-sm uppercase tracking-widest px-8 py-4 active:scale-95 transition-transform duration-100">
+                        Install
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- BottomNavBar Anchor (Suppressed contextually but shown here as ghost element for PWA feel) -->
+<nav class="fixed bottom-0 w-full z-40 flex justify-around items-center h-20 pb-safe bg-[#131b2e] opacity-30 grayscale pointer-events-none">
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] px-4 py-1">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Schedule</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] px-4 py-1">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Trades</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] px-4 py-1">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Tasks</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#b7c8e1] px-4 py-1">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Alerts</span>
+</div>
+</nav>
+</body></html>
