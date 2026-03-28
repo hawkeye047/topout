@@ -2,7 +2,7 @@
 import ProgressRing from './ProgressRing';
 import { daysBetween, formatDate } from '@/lib/utils';
 
-export default function StatsBar({ stats, data }) {
+export default function StatsBar({ stats, data, criticalPathStatus }) {
   if (!stats) return null;
 
   const today = new Date();
@@ -11,6 +11,8 @@ export default function StatsBar({ stats, data }) {
   const elapsed = Math.max(0, daysBetween(projStart, today));
   const timePct = stats.totalDays ? Math.min(100, Math.round((elapsed / stats.totalDays) * 100)) : 0;
   const onTrack = stats.pct >= timePct - 10;
+
+  const cp = criticalPathStatus;
 
   return (
     <div className="px-6 py-6 flex gap-4 overflow-x-auto no-scrollbar">
@@ -28,6 +30,26 @@ export default function StatsBar({ stats, data }) {
           </div>
         </div>
       </div>
+
+      {/* Critical Path */}
+      {cp && (
+        <div className="stat-card min-w-[160px] border-l-2 border-error">
+          <p className="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Critical Path</p>
+          {cp.onTrack ? (
+            <>
+              <h3 className="text-lg font-black font-headline tracking-tight text-tertiary uppercase">On Track</h3>
+              <p className="text-xs text-secondary mt-1 tracking-tight uppercase">{cp.criticalCount} activities</p>
+            </>
+          ) : (
+            <>
+              <h3 className="text-lg font-black font-headline tracking-tight text-error uppercase">
+                {cp.totalRiskDays}d At Risk
+              </h3>
+              <p className="text-xs text-error mt-1 tracking-tight uppercase">{cp.atRiskCount} behind pace</p>
+            </>
+          )}
+        </div>
+      )}
 
       {/* In Progress */}
       <div className="stat-card min-w-[140px]">
